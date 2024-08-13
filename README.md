@@ -5,7 +5,7 @@
 # Installation
 1. Clone the repository
 ```
-   git clone https://github.com/Ashrafmuhmed/news-app.git 
+   git clone https://github.com/Ashrafmuhmed/News_App
 ```
 2. Install dependencies
 ```
