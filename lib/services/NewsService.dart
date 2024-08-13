@@ -15,7 +15,8 @@ class Newsservice {
         articleModels.add(Article(
             title: article['title'],
             image: article['urlToImage'],
-            subtitle: article['description']));
+            subtitle: article['description'],
+            url: article['url']));
       }
       return articleModels;
     } catch (e) {
@@ -34,7 +35,8 @@ class Newsservice {
         articleModels.add(Article(
             title: article['title'],
             image: article['urlToImage'],
-            subtitle: article['description']));
+            subtitle: article['description'],
+            url: article['url']));
       }
       return articleModels;
     } catch (e) {
@@ -53,7 +55,8 @@ class Newsservice {
         articleModels.add(Article(
             title: article['title'],
             image: article['urlToImage'],
-            subtitle: article['description']));
+            subtitle: article['description'],
+            url: article['url']));
       }
       return articleModels;
     } catch (e) {
@@ -72,7 +75,8 @@ class Newsservice {
         articleModels.add(Article(
             title: article['title'],
             image: article['urlToImage'],
-            subtitle: article['description']));
+            subtitle: article['description'],
+            url: article['url']));
       }
       return articleModels;
     } catch (e) {
@@ -91,7 +95,8 @@ class Newsservice {
         articleModels.add(Article(
             title: article['title'],
             image: article['urlToImage'],
-            subtitle: article['description']));
+            subtitle: article['description'],
+            url: article['url']));
       }
       return articleModels;
     } catch (e) {
@@ -110,7 +115,8 @@ class Newsservice {
         articleModels.add(Article(
             title: article['title'],
             image: article['urlToImage'],
-            subtitle: article['description']));
+            subtitle: article['description'],
+            url: article['url']));
       }
       return articleModels;
     } catch (e) {
