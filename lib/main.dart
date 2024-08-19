@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:news_cloud_app/screens/HomePage/HomePage.dart';
-import 'package:dio/dio.dart';
-import 'services/NewsService.dart';
 
 void main() {
   runApp(NewsApp());

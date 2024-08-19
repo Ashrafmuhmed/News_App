@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:news_cloud_app/models/article.dart';
 import '../Custom_Widgets/News_Container.dart';
-import 'NewsService.dart';
 
 class Newslistview extends StatelessWidget {
-  List<Article> articles = [];
-  Newslistview({super.key, required this.articles});
+  final List<Article> articles;
+  const Newslistview({super.key, required this.articles});
 
   @override
   Widget build(BuildContext context) {

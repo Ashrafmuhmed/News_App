@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:news_cloud_app/models/article.dart';
 import 'package:news_cloud_app/services/NewsListView.dart';
@@ -14,33 +13,42 @@ class Sciencenewsbuilder extends StatefulWidget {
 }
 
 class _NewsListViewBuilderState extends State<Sciencenewsbuilder> {
-  List<Article> articles = [];
-  bool isLoading = true;
-
-  Future<void> getGeneralNews() async {
-    articles = await Newsservice().getScienceNews();
-    setState(() {});
-    isLoading = false;
-  }
-
+  var res;
 
   @override
   void initState() {
     super.initState();
-    getGeneralNews();
+    res = Newsservice().getScienceNews();
   }
 
   @override
   Widget build(BuildContext context) {
-    return isLoading ? 
-      SliverToBoxAdapter(
-          child: Center(
-            child: CircularProgressIndicator(
-              color: Colors.orangeAccent,
-            ),
-          ),
-      )
-    : Newslistview(articles: articles);
+    return FutureBuilder<List<Article>>(
+        future: res,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState != ConnectionState.done) {
+            return const SliverToBoxAdapter(
+              child: Center(
+                child: CircularProgressIndicator(
+                  color: Colors.orangeAccent,
+                ),
+              ),
+            );
+          } else if (snapshot.hasData) {
+            return Newslistview(articles: snapshot.data!);
+          } else {
+            return const Text('Invalid request in the current time....');
+          }
+        });
   }
-
 }
+
+// isLoading ? 
+//       SliverToBoxAdapter(
+//           child: Center(
+//             child: CircularProgressIndicator(
+//               color: Colors.orangeAccent,
+//             ),
+//           ),
+//       )
+//     : Newslistview(articles: articles);

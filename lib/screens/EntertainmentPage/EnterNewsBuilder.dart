@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:news_cloud_app/models/article.dart';
 import 'package:news_cloud_app/services/NewsListView.dart';
@@ -14,25 +13,38 @@ class Enternewsbuilder extends StatefulWidget {
 }
 
 class _NewsListViewBuilderState extends State<Enternewsbuilder> {
-  List<Article> articles = [];
-  bool isLoading = true;
-
-  Future<void> getGeneralNews() async {
-    articles = await Newsservice().getEntertainNews();
-    setState(() {});
-    isLoading = false;
-  }
-
+  var res;
 
   @override
   void initState() {
     super.initState();
-    getGeneralNews();
+    res = Newsservice().getEntertainNews();
   }
 
   @override
   Widget build(BuildContext context) {
-    return isLoading ? 
+    return FutureBuilder<List<Article>>(
+        future: res,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState != ConnectionState.done) {
+            return const SliverToBoxAdapter(
+              child: Center(
+                child: CircularProgressIndicator(
+                  color: Colors.orangeAccent,
+                ),
+              ),
+            );
+          } else if (snapshot.hasData) {
+            return Newslistview(articles: snapshot.data!);
+          } else {
+            return Text('Invalid request right now , try again later....');
+          }
+        }
+        );
+  }
+
+  /*
+  isLoading ? 
       SliverToBoxAdapter(
           child: Center(
             child: CircularProgressIndicator(
@@ -41,6 +53,5 @@ class _NewsListViewBuilderState extends State<Enternewsbuilder> {
           ),
       )
     : Newslistview(articles: articles);
-  }
-
+  */
 }

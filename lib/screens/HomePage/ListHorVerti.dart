@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_cloud_app/screens/EntertainmentPage/Entertainmentpage.dart';
 import 'package:news_cloud_app/screens/HealthPage/Healthpage.dart';
-import 'package:news_cloud_app/screens/HomePage/HomePage.dart';
 import 'package:news_cloud_app/screens/SciencePage/SciencePage.dart';
 import 'package:news_cloud_app/screens/SportsScreen/SportsPage.dart';
 import '../../Custom_Widgets/Header_Category.dart';

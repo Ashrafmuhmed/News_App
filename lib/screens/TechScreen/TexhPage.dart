@@ -1,14 +1,5 @@
-import 'dart:ffi';
 import 'package:flutter/material.dart';
-import 'package:news_cloud_app/Custom_Widgets/Header_Category.dart';
-import 'package:news_cloud_app/models/article.dart';
-import 'package:news_cloud_app/screens/HomePage/GeneralNewsBuilder.dart';
-import 'package:news_cloud_app/screens/HomePage/ListHorVerti.dart';
-import 'package:news_cloud_app/screens/SportsScreen/SportsNewsBuilder.dart';
 import 'package:news_cloud_app/screens/TechScreen/TechNewsBuilder.dart';
-import 'package:news_cloud_app/services/NewsListView.dart';
-import 'package:news_cloud_app/services/NewsService.dart';
-import '../../Custom_Widgets/News_Container.dart';
 // import 'NewsListView.dart';
 
 class Techpage extends StatelessWidget {
@@ -35,7 +26,7 @@ class Techpage extends StatelessWidget {
             ],
           ),
         ),
-        body: CustomScrollView(
+        body: const CustomScrollView(
           physics: BouncingScrollPhysics(),
           slivers: [
             // SliverToBoxAdapter(

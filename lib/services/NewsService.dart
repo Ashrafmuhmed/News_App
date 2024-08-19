@@ -7,7 +7,7 @@ class Newsservice {
     final dio = Dio();
     try {
       Response response = await dio.get(
-          'https://newsapi.org/v2/everything?language=ar&apiKey=b0b51b55d8bd4126965f5972c487f000&domains=bbc.com');
+          'https://newsapi.org/v2/everything?language=ar&apiKey=64c2f48ade184fbda3ed93fe3ee63f6e&domains=bbc.com');
       Map<String, dynamic> jsonData = response.data;
       List<dynamic> articles = jsonData['articles'];
       List<Article> articleModels = [];
@@ -27,7 +27,7 @@ class Newsservice {
     final dio = Dio();
     try {
       Response response = await dio.get(
-          'https://newsapi.org/v2/everything?language=ar&apiKey=b0b51b55d8bd4126965f5972c487f000&q=%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%85%D8%A8%D9%8A%D8%A7%D8%AF');
+          'https://newsapi.org/v2/everything?language=ar&apiKey=64c2f48ade184fbda3ed93fe3ee63f6e&q=%D8%A7%D9%84%D8%A3%D9%88%D9%84%D9%85%D8%A8%D9%8A%D8%A7%D8%AF');
       Map<String, dynamic> jsonData = response.data;
       List<dynamic> articles = jsonData['articles'];
       List<Article> articleModels = [];
@@ -47,7 +47,7 @@ class Newsservice {
     final dio = Dio();
     try {
       Response response = await dio.get(
-          'https://newsapi.org/v2/everything?language=ar&apiKey=b0b51b55d8bd4126965f5972c487f000&q=%D8%B0%D9%83%D8%A7%D8%A1%20OR%20%D8%A7%D8%A8%D9%84%20OR%20%D9%86%D8%AA');
+          'https://newsapi.org/v2/everything?language=ar&apiKey=64c2f48ade184fbda3ed93fe3ee63f6e&q=%D8%B0%D9%83%D8%A7%D8%A1%20OR%20%D8%A7%D8%A8%D9%84%20OR%20%D9%86%D8%AA');
       Map<String, dynamic> jsonData = response.data;
       List<dynamic> articles = jsonData['articles'];
       List<Article> articleModels = [];
@@ -67,7 +67,7 @@ class Newsservice {
     final dio = Dio();
     try {
       Response response = await dio.get(
-          'https://newsapi.org/v2/everything?language=ar&apiKey=b0b51b55d8bd4126965f5972c487f000&q=%D8%B9%D9%84%D8%A7%D8%AC%20OR%20%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89%20OR%20%D8%A7%D9%85%D8%B1%D8%A7%D8%B6%20OR%20%D9%85%D8%B1%D8%B6');
+          'https://newsapi.org/v2/everything?language=ar&apiKey=64c2f48ade184fbda3ed93fe3ee63f6e&q=%D8%B9%D9%84%D8%A7%D8%AC%20OR%20%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89%20OR%20%D8%A7%D9%85%D8%B1%D8%A7%D8%B6%20OR%20%D9%85%D8%B1%D8%B6');
       Map<String, dynamic> jsonData = response.data;
       List<dynamic> articles = jsonData['articles'];
       List<Article> articleModels = [];
@@ -87,7 +87,7 @@ class Newsservice {
     final dio = Dio();
     try {
       Response response = await dio.get(
-          'https://newsapi.org/v2/everything?language=ar&apiKey=b0b51b55d8bd4126965f5972c487f000&q=%D8%AA%D8%B1%D9%81%D9%8A%D9%87%20OR%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D9%86%20OR%20%D8%AD%D9%81%D9%84');
+          'https://newsapi.org/v2/everything?language=ar&apiKey=64c2f48ade184fbda3ed93fe3ee63f6e&q=%D8%AA%D8%B1%D9%81%D9%8A%D9%87%20OR%20%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D9%86%20OR%20%D8%AD%D9%81%D9%84');
       Map<String, dynamic> jsonData = response.data;
       List<dynamic> articles = jsonData['articles'];
       List<Article> articleModels = [];
@@ -107,7 +107,7 @@ class Newsservice {
     final dio = Dio();
     try {
       Response response = await dio.get(
-          'https://newsapi.org/v2/everything?language=ar&apiKey=b0b51b55d8bd4126965f5972c487f000&q=%D8%B9%D9%84%D9%88%D9%85%20OR%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%20OR%20%D9%86%D8%A7%D8%B3%D8%A7');
+          'https://newsapi.org/v2/everything?language=ar&apiKey=64c2f48ade184fbda3ed93fe3ee63f6e&q=%D8%B9%D9%84%D9%88%D9%85%20OR%20%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%20OR%20%D9%86%D8%A7%D8%B3%D8%A7');
       Map<String, dynamic> jsonData = response.data;
       List<dynamic> articles = jsonData['articles'];
       List<Article> articleModels = [];
